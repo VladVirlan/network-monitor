@@ -8,7 +8,7 @@ interface Props {
 
 const Aside = ({ activeSection, setActiveSection }: Props) => {
     return (
-        <nav className="nav flex-column gap-1">
+        <nav className="nav flex-column gap-1 flex-grow-1">
             {sectionLinks.map((link) => (
                 <button
                     key={link.id}
