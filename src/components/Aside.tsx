@@ -1,18 +1,27 @@
-const Aside = () => {
+import { Section } from "../types/sections";
+import { sectionLinks } from "../config/sectionLinks";
+
+interface Props {
+    activeSection: Section;
+    setActiveSection: (section: Section) => void;
+}
+
+const Aside = ({ activeSection, setActiveSection }: Props) => {
     return (
-        <nav className="nav flex-column">
-            <a href="#overview" className="nav-link text-white">
-                Overview
-            </a>
-            <a href="#devices" className="nav-link text-white">
-                Devices
-            </a>
-            <a href="#traffic" className="nav-link text-white">
-                Traffic
-            </a>
-            <a href="#ping" className="nav-link text-white">
-                Diagnostics
-            </a>
+        <nav className="nav flex-column gap-1">
+            {sectionLinks.map((link) => (
+                <button
+                    key={link.id}
+                    onClick={() => setActiveSection(link.id)}
+                    className={`btn btn-link nav-link text-start ${
+                        activeSection === link.id
+                            ? "active text-white"
+                            : "text-white-50"
+                    }`}
+                >
+                    {link.label}
+                </button>
+            ))}
         </nav>
     );
 };
