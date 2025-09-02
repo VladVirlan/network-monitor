@@ -1,0 +1,1 @@
+export type Device = { ip: string; mac: string; hostname?: string; status: "online" | "offline"; ping: string; vendor?: string; interface?: string; os?: string; uptime?: string; lastSeen?: string; openPorts?: number[]; };
