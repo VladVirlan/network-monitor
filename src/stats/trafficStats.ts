@@ -77,7 +77,7 @@ export const lineChartData: LineChartProps<any>[] = [
       xKey: "time",
       yKey: "bandwidth",
       yLabel: "Mbps",
-      colour: "#0d6efd",
+      colour: "#dc3545",
     },
     {
       title: "Latency Over Time",
@@ -85,7 +85,7 @@ export const lineChartData: LineChartProps<any>[] = [
       xKey: "time",
       yKey: "latency",
       yLabel: "ms",
-      colour: "#198754",
+      colour: "#ff6b6b",
     },
     {
       title: "Packet Loss Over Time",
@@ -93,7 +93,7 @@ export const lineChartData: LineChartProps<any>[] = [
       xKey: "time",
       yKey: "loss",
       yLabel: "%",
-      colour: "#dc3545",
+      colour: "#a71d2a",
     },
 ]
 

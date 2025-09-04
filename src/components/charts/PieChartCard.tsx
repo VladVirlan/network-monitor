@@ -9,7 +9,7 @@ export interface PieChartProps<T extends { name: string; value: number }> {
     loading?: boolean;
 }
 
-const DEFAULT_COLOURS = ["#0d6efd", "#198754", "#ffc107", "#dc3545", "#6f42c1"];
+const DEFAULT_COLOURS = ["#dc3545", "#ff6b6b", "#a71d2a", "#8b0000", "#450000"];
 
 const PieChartCard = <T extends { name: string; value: number }>({
     title,
@@ -59,7 +59,19 @@ const PieChartCard = <T extends { name: string; value: number }>({
                                     />
                                 ))}
                             </Pie>
-                            <Tooltip />
+                            <Tooltip
+                                contentStyle={{
+                                    backgroundColor: "#212529f2",
+                                    border: "1px solid #dc3545",
+                                    borderRadius: "6px",
+                                    padding: "10px",
+                                }}
+                                labelStyle={{
+                                    color: "#dc3545",
+                                    fontWeight: "bold",
+                                }}
+                                itemStyle={{ color: "#ffffff" }}
+                            />
                         </PieChart>
                     </ResponsiveContainer>
                 )}

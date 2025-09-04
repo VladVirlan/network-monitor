@@ -5,7 +5,6 @@ import {
     YAxis,
     CartesianGrid,
     Tooltip,
-    Legend,
     ResponsiveContainer,
 } from "recharts";
 import Skeleton from "react-loading-skeleton";
@@ -58,8 +57,19 @@ const LineChartCard = <T extends object>({
                                     position: "insideLeft",
                                 }}
                             />
-                            <Tooltip />
-                            <Legend />
+                            <Tooltip
+                                contentStyle={{
+                                    backgroundColor: "#212529f2",
+                                    border: "1px solid #dc3545",
+                                    borderRadius: "6px",
+                                    padding: "10px",
+                                }}
+                                labelStyle={{
+                                    color: "#dc3545",
+                                    fontWeight: "bold",
+                                }}
+                                itemStyle={{ color: "#ffffff" }}
+                            />
                             <Line
                                 type="monotone"
                                 dataKey={yKey as string}
