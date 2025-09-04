@@ -1,7 +1,7 @@
 import { Device } from "../../types/devices.ts";
 import { devices } from "../../stats/devicesStats.ts";
 import { deviceColumns } from "../../stats/deviceColumns.tsx";
-import Table from "../Table.tsx";
+import Table from "../table/Table.tsx";
 
 const Devices = () => {
     return (

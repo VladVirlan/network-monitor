@@ -40,3 +40,15 @@ body {
     border-radius: 0 0 0.3rem 0.3rem;
     overflow: hidden;
 }
+
+/* CHART STYLES */
+
+.chart-card {
+    min-width: 40%;
+}
+
+@media (max-width: 768px) {
+    .chart-card {
+        min-width: 50%;
+    }
+}

@@ -14,7 +14,9 @@
     "@tauri-apps/plugin-opener": "^2",
     "bootstrap": "^5.3.8",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-loading-skeleton": "^3.5.0",
+    "recharts": "^3.1.2"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2",

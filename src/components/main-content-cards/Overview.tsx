@@ -1,6 +1,6 @@
-import Tabs from "../Tabs";
+import Tabs from "../tabs/Tabs";
 import { groupedStats } from "../../stats/overviewStats";
-import StatGroup from "../StatGroup";
+import StatGroup from "../stat-cards/StatGroup";
 
 const Overview = () => {
     return (

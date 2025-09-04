@@ -1,4 +1,4 @@
-import { Stat } from "../types/stats";
+import { Stat } from "../../types/stats";
 import StatCard from "./StatCard";
 
 interface Props {

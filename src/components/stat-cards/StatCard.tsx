@@ -1,5 +1,5 @@
-import Tooltip from "./Tooltip";
-import { Stat } from "../types/stats";
+import Tooltip from "../tooltip/Tooltip";
+import { Stat } from "../../types/stats";
 
 interface Props {
     stat: Stat;
