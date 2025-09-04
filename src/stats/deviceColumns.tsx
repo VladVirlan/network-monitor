@@ -1,4 +1,4 @@
-import { Column } from "../components/Row";
+import { Column } from "../components/table/Row";
 import { Device } from "../types/devices";
 
 export const deviceColumns: Column<Device>[] = [
