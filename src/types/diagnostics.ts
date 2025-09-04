@@ -1,0 +1,1 @@
+export type Diagnostic = { ip: string; online: boolean; latency: number; jitter: number; packetLoss: number; bandwidth: number; lastSeen: string; };

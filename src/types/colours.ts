@@ -1,0 +1,1 @@
+export type Colour = "primary" | "secondary" | "success" | "warning" | "danger" | "info" | "light" | "dark";

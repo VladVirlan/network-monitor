@@ -1,16 +1,9 @@
+import { Colour } from "../types/colours";
+
 interface Props {
     message?: string;
     height?: string | number;
-    spinnerColour?:
-        | "primary"
-        | "secondary"
-        | "success"
-        | "danger"
-        | "warning"
-        | "info"
-        | "light"
-        | "dark"
-        | "link";
+    spinnerColour?: Colour;
 }
 
 const Loader = ({
