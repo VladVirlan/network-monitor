@@ -1,21 +1,26 @@
-import Table from "../table/Table.tsx";
-import { Diagnostic } from "../../types/diagnostics.ts";
-import { diagnostics } from "../../stats/diagnosticsStats.ts";
-import { diagnosticColumns } from "../../stats/diagnosticColumns.tsx";
+import { Stat } from "../../types/stats";
+import DiagnosticsCard from "../diagnostics-components/DiagnosticsCard";
+import DiagnosticsStatGroup from "../diagnostics-components/DiagnosticsStatGroup";
+import useDiagnostics from "../hooks/useDiagnostics";
+import { mapDiagnosticsToStats } from "../../stats/diagnosticsStats";
 
 const Diagnostics = () => {
+    const { isTesting, results, runTest } = useDiagnostics();
+    const stats: Stat[] = results ? mapDiagnosticsToStats(results) : [];
+
     return (
-        <div className="mt-4">
-            <h1 className="mb-4">Diagnostics</h1>
-            <div className="border shadow-sm rounded-3">
-                <div className="bg-danger text-white px-3 py-2 rounded-top">
-                    <h5 className="mb-0">Network Diagnostics</h5>
-                </div>
-                <Table<Diagnostic>
-                    data={diagnostics}
-                    columns={diagnosticColumns}
-                />
-            </div>
+        <div className="container py-4">
+            <h2 className="mb-4 fw-bold">Network Diagnostics</h2>
+
+            <DiagnosticsCard
+                isTesting={isTesting}
+                download={results?.downloadSpeed ?? null}
+                upload={results?.uploadSpeed ?? null}
+                latency={results?.latency ?? null}
+                onRunTest={runTest}
+            />
+
+            <DiagnosticsStatGroup isTesting={isTesting} stats={stats} />
         </div>
     );
 };

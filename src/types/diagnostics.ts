@@ -1,1 +1,1 @@
-export type Diagnostic = { ip: string; online: boolean; latency: number; jitter: number; packetLoss: number; bandwidth: number; lastSeen: string; };
+export type DiagnosticsResult = { downloadSpeed: number; uploadSpeed: number; latency: number; jitter: number; publicIp: string; localIp: string; dnsTime: number; packetLoss: number; };

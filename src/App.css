@@ -52,3 +52,40 @@ body {
         min-width: 50%;
     }
 }
+
+/* PULSE STYLES */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse-animate {
+    animation: pulse 0.75s infinite;
+}
+
+/* SPEED GAUGE STYLES */
+
+.speed-gauge-wrapper {
+    width: 160px;
+    height: 80px;
+}
+
+.speed-gauge {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 270deg,
+        var(--progress-colour) calc(var(--progress) * 180deg),
+        rgba(0, 0, 0, 0.1) 0
+    );
+    clip-path: inset(0 0 50% 0);
+}
